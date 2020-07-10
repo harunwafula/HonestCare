@@ -65,6 +65,7 @@ html {
 .loadingPage.hidden{
     animation: fadeOut 3s;
     animation-fill-mode: forwards;
+    display: none;
 }
 
 @keyframes fadeOut {
