@@ -313,7 +313,6 @@ nav {
     .nav-links {
         position: fixed;
         background: black;
-        height: 70vh;
         width: 100%;
         flex-direction: column;
         justify-content: start;
@@ -322,16 +321,16 @@ nav {
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
         pointer-events: none;
-        overflow-y: hidden;
         display: hidden;
     }
 
     .nav-links.open {
         display: flex;
+        height: 70vh;
+
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
-        overflow-y: scroll;
     }
     .nav-links li {
         padding: 20px;
