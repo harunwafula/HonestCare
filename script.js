@@ -42,10 +42,13 @@ window.onload = (event) => {
 })();
 
 window.addEventListener("optimizedScroll", function() {
-    box1.style.transform = "rotateZ(-"+window.pageYOffset/4+"deg) " + "translateX(-"+window.pageYOffset+"px)";
-    box2.style.transform = "rotate("+window.pageYOffset/2+"deg)";
-
-    landingImg1.style.transform = "translateX("+window.pageYOffset/8+"px)";
+    if(window.outerWidth > 450){
+      box1.style.transform = "rotateZ(-"+window.pageYOffset/4+"deg) " + "translateX(-"+window.pageYOffset+"px)";
+      box2.style.transform = "rotate("+window.pageYOffset/2+"deg)";
+  
+      landingImg1.style.transform = "translateX("+window.pageYOffset/8+"px)";
+    }
+    
     // landingImg1.style.opacity= 1/((window.pageYOffset/window.height)*100);
 });
 
