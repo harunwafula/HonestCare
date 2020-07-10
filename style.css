@@ -3,7 +3,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body,
@@ -11,6 +10,7 @@ html {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     width: 100vw;
+    box-sizing: border-box;
 }
 
 .btn:focus,
@@ -27,7 +27,7 @@ html {
     z-index: 1000;
     width: 100vw;
     height: 100vh;
-    background-color:  white;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,48 +38,52 @@ html {
     width: 40px;
     height: 40px;
     background-color: #333;
-    
+
     margin: 10px auto;
     -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
     animation: sk-rotateplane 1.2s infinite ease-in-out;
-  }
-  
-  @-webkit-keyframes sk-rotateplane {
-    0% { -webkit-transform: perspective(120px) }
-    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
-    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
-  }
-  
-  @keyframes sk-rotateplane {
-    0% { 
-      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-    } 50% { 
-      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-    } 100% { 
-      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-      display: none;
+}
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px);
     }
-  }
-.loadingPage.hidden{
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+    }
+}
+
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        display: none;
+    }
+}
+.loadingPage.hidden {
     animation: fadeOut 3s;
     animation-fill-mode: forwards;
 }
 
 @keyframes fadeOut {
-
-
     70% {
         opacity: 1;
     }
     100% {
-        opacity: 0 ;
-        visibility : hidden;
+        opacity: 0;
+        visibility: hidden;
     }
-
-    
 }
 /* Navbar styles */
 
@@ -90,6 +94,7 @@ nav {
     height: 10vh;
     background-color: white;
     z-index: 1;
+    display: block;
 }
 
 .nav-links {
@@ -224,11 +229,9 @@ nav {
     height: 300px;
     border: 30px solid rgba(207, 196, 205, 0.3);
     transform: rotateZ(65deg);
-    
 }
 
-
-@keyframes rotate{
+@keyframes rotate {
     100% {
         transform: rotate(180deg);
     }
@@ -243,7 +246,6 @@ nav {
     height: 200px;
     border: 30px solid rgba(119, 108, 108, 0.3);
     animation: rotate 3s infinite;
-
 }
 
 .morecontent {
@@ -293,7 +295,7 @@ nav {
     .line {
         width: 30px;
         height: 3px;
-        background-color: white;
+        background-color: black;
         margin: 5px;
     }
 
@@ -312,6 +314,8 @@ nav {
     }
     .nav-links {
         position: fixed;
+        top: 0;
+        right: 0;
         background: black;
         width: 100%;
         flex-direction: column;
@@ -321,13 +325,12 @@ nav {
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
         pointer-events: none;
-        display: hidden;
+        display: none;
     }
 
     .nav-links.open {
         display: flex;
         height: 70vh;
-
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
