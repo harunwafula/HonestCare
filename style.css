@@ -295,7 +295,7 @@ nav {
     .line {
         width: 30px;
         height: 3px;
-        background-color: white;
+        background-color: black;
         margin: 5px;
     }
 
@@ -325,15 +325,21 @@ nav {
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
         pointer-events: none;
+        display: none;
+        overflow-y: hidden;
     }
 
-    .nav-links.open {
-        display: flex;
+    /* .nav-links.open {
+
+
+        display: block;
         height: 70vh;
+
+        
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
-    }
+    } */
     .nav-links li {
         padding: 20px;
         opacity: 0;
