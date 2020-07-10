@@ -295,7 +295,7 @@ nav {
     .line {
         width: 30px;
         height: 3px;
-        background-color: black;
+        background-color: white;
         margin: 5px;
     }
 
@@ -306,14 +306,14 @@ nav {
     }
 
     .hamburger {
-        position: fixed;
+        position: absolute;
         cursor: pointer;
         right: 6%;
-        top: 2%;
+        top: 5%;
         z-index: 2;
     }
     .nav-links {
-        position: fixed;
+        position: absolute;
         top: 0;
         right: 0;
         background: black;
@@ -325,21 +325,20 @@ nav {
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
         pointer-events: none;
-        display: none;
         overflow-y: hidden;
     }
 
-    /* .nav-links.open {
+    .nav-links.open {
 
 
-        display: block;
+        display: flex;
         height: 70vh;
 
         
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
-    } */
+    }
     .nav-links li {
         padding: 20px;
         opacity: 0;
