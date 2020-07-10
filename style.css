@@ -322,12 +322,14 @@ nav {
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
         pointer-events: none;
+        overflow-y: hidden;
     }
 
     .nav-links.open {
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
+        overflow-y: scroll;
     }
     .nav-links li {
         padding: 20px;
