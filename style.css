@@ -323,9 +323,11 @@ nav {
         transition: all 1s ease-out;
         pointer-events: none;
         overflow-y: hidden;
+        display: hidden;
     }
 
     .nav-links.open {
+        display: flex;
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
         pointer-events: all;
