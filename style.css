@@ -60,12 +60,12 @@ html {
     } 100% { 
       transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
       -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      display: none;
     }
   }
 .loadingPage.hidden{
     animation: fadeOut 3s;
     animation-fill-mode: forwards;
-    display: none;
 }
 
 @keyframes fadeOut {
