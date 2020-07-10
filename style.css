@@ -9,6 +9,7 @@ body,
 html {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+    overflow-y: scroll;
     width: 100vw;
     box-sizing: border-box;
 }
@@ -324,7 +325,6 @@ nav {
         clip-path: circle(100px at 95% -5%);
         -webkit-clip-path: circle(100px at 95% -5%);
         transition: all 1s ease-out;
-        pointer-events: none;
         overflow-y: hidden;
     }
 
@@ -337,7 +337,6 @@ nav {
         
         clip-path: circle(500px at 90% -10%);
         -webkit-clip-path: circle(500px at 90% -10%);
-        pointer-events: all;
     }
     .nav-links li {
         padding: 20px;
