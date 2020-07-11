@@ -2,7 +2,58 @@
 .body {
     overscroll-behavior: none;
 }
+.navbar {
+    z-index: 5;
+}
 
+.navbar-collapse {
+    background-color: white !important;
+    width: 100vw;
+}
+
+.navbar-light {
+    background-color: white !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+    background: transparent !important;
+    outline: none;
+  }
+
+.navbar-toggler:focus, .navbar-toggler:hover{
+    outline: none;
+}
+  .navbar-toggler:hover {
+    background: transparent !important;
+  }
+  .navbar-toggler .icon-bar {
+    width: 22px;
+    background-color: black;
+    margin: 3px;
+    height: 3px;
+    transition: all 0.2s;
+  }
+  .navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .navbar-toggler .middle-bar {
+    opacity: 0;
+  }
+  .navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+  .navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+  }
+  .navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+  }
+  .navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+  }
 .section1, .section2, .section3{
     height: 100vh;
 
@@ -22,3 +73,4 @@
 .section3 {
     background-color: red;
 }
+
