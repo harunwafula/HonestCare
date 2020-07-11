@@ -142,7 +142,9 @@ body {
     }
 }
 
-
+.section1 .row {
+    width: 80%;
+}
 .section2{
     position: relative;
     height: 100vh;
