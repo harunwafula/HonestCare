@@ -14,6 +14,11 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
 .btn:focus,
 .btn:active {
     outline: none !important;
