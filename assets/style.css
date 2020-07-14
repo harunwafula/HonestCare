@@ -19,6 +19,7 @@ body {
 
 .section1 .row {
     margin: 0 auto;
+    width: 80%;
 }
 
 .navbar-collapse {
@@ -96,12 +97,13 @@ body {
 }
 
 .tab button.active {
-    background-color: rgb(255, 0, 149);
+    background-color:#50409A;
+    color: white;
     border: none;
 }
 
 .tab button:hover {
-    background-color: rgb(255, 0, 149);
+    background-color: #50409A;
     /* border-color: white; */
     color: white;
 }
@@ -113,14 +115,14 @@ body {
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    margin: 50px;
-    animation: fadeEffect 1s;
-    -webkit-animation: fadeEffect 1s;
-    -moz-animation: fadeEffect 1s;
+    margin: 30px 0 ;
+    animation: fadeEffect 3s;
+    -webkit-animation: fadeEffect 3s;
+    -moz-animation: fadeEffect 3s;
 }
 
 .landingImg {
-    width: 500px;
+    width: 400px;
 }
 
 .landing-text {
@@ -131,7 +133,7 @@ body {
 }
 
 .special-text {
-    color: rgb(255, 0, 149);
+    color: #50409A;
 }
 @keyframes fadeEffect {
     from {
@@ -142,24 +144,22 @@ body {
     }
 }
 
-.section1 .row {
-    width: 80%;
-}
+
 .section2{
     position: relative;
     height: 100vh;
-    background-color: black;
+    background-color: #1f1258;
     z-index: -10;
     color: white;
     width: 100vw;
 }
-/* 
+
 .section2::before {
     content: "";
     position: absolute;
     top: -10%;
     left: -25%;
-    z-index: -1;
+    z-index: -100;
     width: 125vw;
     height: 75%;
     background: inherit;
@@ -167,21 +167,36 @@ body {
     transform: rotate(-7deg);
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
-} */
+}
 
 
 .boxcontainer {
     position: relative;
 }
-.box1 {
+.bgCloud1 {
     position: absolute;
-    top: 0;
-    left: 10%;
+    top: -10%;
+    left: -10%;
     z-index: -11;
     width: 500px;
-    height: 500px;
-    border: 30px solid rgba(255, 48, 211, 0.3);
-    transform: rotateZ(65deg);
+    animation: translateX 25s infinite;
+
+}
+.bgCloud2 {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    z-index: -11;
+    width: 300px;
+   animation: translateX 20s infinite;
+}
+
+@keyframes translateX {
+    50% {
+        transform: translateX(130px);
+    }
+
+
 }
 
 .box2 {
@@ -228,11 +243,16 @@ body {
 
 }
 
-
-.section3 {
-    background-color: red;
+.section2 .row {
+    margin: 0 auto;
+    width: 80%;
 }
 
+.card {
+    color: black;
+    text-align: center;
+    margin: 30px 0px;
+}
 
 @media screen and (max-width: 768px){
     .landing-text {

@@ -12,8 +12,8 @@ var body = document.body,
         html.clientHeight, html.scrollHeight, html.offsetHeight );
 
 var loader = document.getElementById("loadingPage");
-var box1 = document.getElementById("box1");
-var box2 = document.getElementById("box2");
+var box1 = document.getElementById("bgCloud1");
+var box2 = document.getElementById("bgCloud2");
 var box3 = document.getElementById("box3");
 var box4 = document.getElementById("box4");
 
@@ -43,13 +43,11 @@ window.onload = (event) => {
 
 window.addEventListener("optimizedScroll", function() {
     if(window.outerWidth > 450){
-      box1.style.transform = "rotateZ(-"+window.pageYOffset/4+"deg) " + "translateX(-"+window.pageYOffset+"px)";
-      box2.style.transform = "rotate("+window.pageYOffset/2+"deg)";
+
   
       landingImg1.style.transform = "translateX("+window.pageYOffset/8+"px)";
     }
     
-    // landingImg1.style.opacity= 1/((window.pageYOffset/window.height)*100);
 });
 
 
