@@ -8,12 +8,34 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="icon" href="./assets/Honnest_Care2.svg">
 
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top  ">
-        <a class="navbar-brand" href="#">HONEST CARE</a>
+<!-- 
+
+    Built with Bootstrap Framework
+
+    Author: Harun Wafula
+
+
+    NB : 
+    search for "Leadership Section" in your preferred IDE and replace the images within the cards.
+    Contact form backend with smtp server needs to be configured
+
+
+ -->
+ 
+<body >
+    <!-- <div id="cover">      <div><img src="./assets/Honnest_Care3.svg" alt="" class="navbar-image"></div>       
+        Loading...</div> -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top  " id="navbar" data-offset-top="197">
+        <a class="navbar-brand" href="#">
+            <img src="./assets/Honnest_Care2.svg" alt="" class="navbar-image">
+            <img src="./Honest Care Assets/Honest Care Assets/SVG/Honest_Care3.svg" alt="" width="100">
+        </a>
         <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -28,135 +50,754 @@
 
         <div class="collapse navbar-collapse  vw-100" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto ">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">BOOK A SITTER</a>
+
+
+
+
+
+
+                <li class="nav-item">
+                    <div class="dropdown nav-">
+                        <button class="dropbtn"> Honest Individual
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#" target="_blank">Book a sitter</a>
+
+
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CHILDCARE COURSES</a>
+                    <div class="dropdown ">
+                        <button class="dropbtn"> Honest Care Classes
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">How it works</a>
+                            <a href="#">Group Classes</a>
+
+                        </div>
+                    </div>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link btn btn-outline-default" href="#">GET IN TOUCH</a>
+                    <a class="nav-link btn btn-custom  rad" href="#requestADemo">Request a demo</a>
                 </li>
+                <li class="nav-item">
+                    <div class="dropdown ">
+                        <a class="nav-link user-account" href="#"><i class="far fa-user-circle"></i><span> My
+                                Account</span> </a>
+                        <div class="dropdown-content r-0">
+                            <a href="#" target="_blank">Login</a>
+                            <a href="#" target="_blank">Register</a>
+
+                        </div>
+                    </div>
+                </li>
+
 
             </ul>
 
         </div>
     </nav>
 
+    <!-- Back to top button -->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+
+    <!-- Main Content -->
     <div class="container">
-        <section class="section1">
+        <!-- Landing Page / Home -->
+        <section class="landing  section1">
             <div class="row">
-                <div class="col-md-6 boxcontainer">
-                    <h1 class="landing-text">An online marketplace used to connect parents to vetted and qualified childcare
-                        professionals.</h1>
-                        <img src="./assets/cloud1.svg" alt="" class="bgCloud1" id="bgCloud1">
-                        <img src="./assets/cloud1.svg" alt="" class="bgCloud2" id="bgCloud2">
-                </div>
-                <div class="col-md-6">
-                    <div class="tab">
-                        <button class="tablinks btn" onclick="openTab(event, 'parent')" id="defaultOpen">Parents</button>
-                        <button class="tablinks btn btn-outline-default" onclick="openTab(event, 'childCareSpecialist')">ChildCare
-                            Specialists</button>
-                    </div>
-    
-                    <div id="parent" class="tabcontent">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2>I am a parent</h2>
-                                <p>Sign up as a parent to search for childcare in your area</p>
-                                <p class="special-text">POST COVID19 special* Sign up to get 1 hour free childcare</p>
-                                <button class="btn">Sign up</button>
-    
-                            </div>
-                            <div class="col-md-6">
-                                <img src="./assets/undraw_play_time_7k7b (1).svg" alt="" class="landingImg"
-                                    id="landingImg1">
-                            </div>
-                        </div>
-    
-                    </div>
-    
-                    <div id="childCareSpecialist" class="tabcontent">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <h2>I am a childcare professional</h2>
-                                <p>Sign up as a childcare professional and find work in your area</p>
-                                <button class="btn btn-outline-default">Sign up</button>
-                            </div>
-                            <div class="col-md-6">
-                                <img src="./assets/undraw_quality_time_wiyl (1).svg" alt="" class="landingImg" id="landingImg2">
-                            </div>
-                        </div>
-    
+                <div class="col-sm-6 boxcontainer fade-in">
 
-                        
-    
+                    <img src="./assets/cloud1.svg" alt="" class="bgCloud1" id="bgCloud1">
+                    <img src="./assets/cloud1.svg" alt="" class="bgCloud2" id="bgCloud2">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                        data-interval="4000">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+
+
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <h1 class="landing-text special-text">Family benefits platform
+                                </h1>
+                                <h3 class="landing-subheading">A employer paid benefit that sets families up for success
+                                    at home and work
+
+                                </h3>
+                                <button class="landing-subheading btn btn-custom">
+                                    How it works
+                                </button>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="landing-text special-text">Honest care services
+
+                                </h1>
+                                <ul>
+                                    <li class="landing-subheading">
+                                        <h4>Parenting and child experts </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4>Healthcare specialists
+                                        </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4>Online kids and family programs
+
+                                        </h4>
+
+                                    </li>
+                                </ul>
+                                <button class="landing-subheading btn btn-custom">
+                                    Learn More
+                                </button>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="landing-text special-text">Guides to support working parents
+
+
+                                </h1>
+                                <ul>
+                                    <li class="landing-subheading">
+                                        <h4> Sleep therapists
+                                        </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4>Lactation consultants
+                                        </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4> Behavioural specialists
+
+
+                                        </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4> Child and parenting experts
+
+
+
+                                        </h4>
+
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="carousel-item">
+                                <h1 class="landing-text special-text">ROI to your company
+
+                                </h1>
+                                <ul>
+                                    <li class="landing-subheading">
+                                        <h4> Increased employee engagement and productivity </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4>High morale
+                                        </h4>
+
+                                    </li>
+                                    <li class="landing-subheading">
+                                        <h4> Decreased health costs
+
+
+                                        </h4>
+
+                                    </li>
+                                    <button class="landing-subheading btn btn-custom">
+                                        Employers
+                                    </button>
+                                </ul>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <h1 class="landing-text special-text">Ready to support your working parents?
+
+                                </h1>
+
+                                <button class="landing-subheading btn btn-custom">
+                                    Request A Demo
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <img src="./assets/images/couple.jpg" alt="" class="landingImg" id="landingImg1">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Why honest care Section -->
+        <section class="whyHonestCare" id="whyHonestCare">
+
+            <div class="row">
+                <div class="col-sm-6 ">
+                    <img src="./assets/images/how-1-1.jpg" alt="" width="600" id="whyHonestCareImg">
+                </div>
+                <div class="col-sm-6 boxcontainer whc-text">
+                    <h1 class="bold-text">Supporting families is good for your business
+                    </h1>
+                    <p>
+                        Working families are the backbone of the South Africa economy, Honest care is here to help
+                        working
+                        parents thrive at home and at work
+
+                    </p>
+
+                </div>
+            </div>
+            <div class="row mt-4">
+                <h2 class="bold-text text-center m-auto w-80">
+                    Working moms and dads are struggling
+
+
+                </h2>
+                <div class="row stat-cards-row">
+                    <div class="col-md-4">
+                        <div class="card fade-in">
+                            <div class="card-body">
+                                <div class="card-title bold-text special-text">
+                                    <h1 class="big-text">
+                                        40%
+                                    </h1>
+
+                                </div>
+                                <div class="card-text">
+                                    Of working moms say they cannot advance in their career and feel successful as a
+                                    parent
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card fade-in">
+                            <div class="card-body">
+                                <div class="card-title bold-text special-text">
+                                    <h1 class="big-text">
+                                        73%
+                                    </h1>
+
+                                </div>
+                                <div class="card-text">
+                                    Of dads say there isn’t enough support for working fathers in the workspace
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card fade-in">
+                            <div class="card-body">
+                                <div class="card-title bold-text special-text">
+                                    <h1 class="big-text">
+                                        80%
+                                    </h1>
+
+                                </div>
+                                <div class="card-text">
+                                    Of parents say caregiving affects their productivity at work
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section2">
+
+        <!-- How it works Section -->
+        <section class="howItWorks " id="howItWorks">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+                <div class="col-sm-6 from-left slide-in subsection">
+                    <h1 class="m50 bold-text special-text">
+                        A family and parenting benefits for forward thinking-employers like you
+
+                    </h1>
+                    <p class="m50">
+                        Life as a working parent is more challenging than ever. Employers offer resources and well
+                        thought
+                        out
+                        health plans- traditional family benefits are lacking.
+                    </p>
+                    <p class="m50">
+                        Employers choose Honest care to fill the gap between to help working families thrive at home and
+                        at work.
+                    </p>
                 </div>
-                    
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+                <div class="col-sm-6 fade-in">
+                    <img src="./assets/images/shutterstock_785162008.jpg " class="m-auto" width="500" alt=""
+                        id="hiw-img">
                 </div>
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+            </div>
+            <div class="row HCServices">
+                <div id="overlay"></div>
+
+                <div class="col-sm-6 d-none d-md-block">
+                    <div class="venn-diagram">
+                        <div class="inner">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle1">
+                        </div>
+                        <div class="inner2">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle2">
+
+                        </div>
+                        <div class="inner3">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle3">
+
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+
+
+
+                <div class="col-sm-6">
+                    <div class="m-auto text-center mt50 animate__animated animate__bounce w-75">
+                        <h2 class="bold-text white-text">
+                            Honest care services
+
+                        </h2>
+                        <p class="white-text">
+                            Our model is designed to build trust, engagement and a happier parent workforce using the
+                            power of
+                            technology.
+
+                        </p>
+
+                    </div>
+
+                    <div class="card fade-in">
+                        <div class=" text-left">
+                            <h2 class="special-text">
+                                1:1 Honest care guides
+
+                            </h2>
+                            <p>
+                                Access to parenting and child experts
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="m-auto text-left">
+                            <h2 class="special-text">
+                                Online kids and family programs
+
+                            </h2>
+                            <p>
+                                Honest care kids and family online programs are used to engage, educate and bring
+                                families
+                                together </p>
+
+                        </div>
+                    </div>
+                    <div class="card fade-in">
+                        <div class="m-auto text-left">
+                            <h2 class="special-text">
+                                Evidence based programs
+
+                            </h2>
+                            <p>
+                                Play based activities, Mental wellness bridge and Best birth initiative
+                            </p>
+
+                        </div>
+                    </div>
+
                 </div>
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+
+
+            </div>
+
+
+        </section>
+
+        <!-- About us section -->
+        <section class="about" id="about">
+
+            <div class="row aboutCnt">
+                <div class="col-sm-6 fade-in">
+                    <img src="./assets/images/working_parents.jpg" alt="" width="600" class="aboutImg">
                 </div>
-                <div class="col-md-4">
-                    <div class="card"><div class="card-body">
-                        <h5 class="card-title">IREGULAR & PART-TIME CARE</h5>
-                     
-                      </div></div>
+                <div class="col-sm-6 fade-in about-text">
+                    <h1 class="bold-text special-text ">
+                        About Us
+                    </h1>
+
+                    <p>
+                        The Honest care team is on a mission to build trust and connection between working parents and
+                        their employers through guidance in each parenting stage.
+
+                    </p>
                 </div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <div class="box3" id="box3"></div>
-                    <div class="box4" id="box4"></div>
+            </div>
+
+            <!-- Leadership Section -->
+            <div class="m-auto text-center">
+                <h4 class="bold-text">Leadership</h4>
+            </div>
+            <div class="row  m-auto w-50">
+                <img src="./assets/Honnest_Care2.svg" alt="" class="servicesImg" id="servicesImg">
+                <div class="col-sm-6">
+                    <div class="card fade-in">
+                        <img class="card-img-top"
+                            src="./assets/dwayne-johnson-attends-the-premiere-of-universal-pictures-news-photo-1161880409-1566504158.jpg"
+                            alt="Card image cap">
+
+                        <div class="card-body">
+                            <div class="card-title">
+                                Zoë Ntlane
+                            </div>
+                            <div class="card-text">
+                                Founder & CEO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card fade-in">
+                        <img class="card-img-top"
+                            src="./assets/dwayne-johnson-attends-the-premiere-of-universal-pictures-news-photo-1161880409-1566504158.jpg"
+                            alt="Card image cap">
+
+                        <div class="card-body">
+                            <div class="card-title">
+                                Clive Makume
+                            </div>
+                            <div class="card-text">
+                                Founder & CTO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card  fade-in">
+                        <img class="card-img-top"
+                            src="./assets/dwayne-johnson-attends-the-premiere-of-universal-pictures-news-photo-1161880409-1566504158.jpg"
+                            alt="Card image cap">
+
+                        <div class="card-body">
+                            <div class="card-title">
+                                Xolani Kumalo
+                            </div>
+                            <div class="card-text">
+                                Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card fade-in">
+                        <img class="card-img-top"
+                            src="./assets/dwayne-johnson-attends-the-premiere-of-universal-pictures-news-photo-1161880409-1566504158.jpg"
+                            alt="Card image cap">
+
+                        <div class="card-body">
+                            <div class="card-title">
+                                Chris Modise
+                            </div>
+                            <div class="card-text">
+                                Developer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="employers" id="employers">
+            <div class="row w-75 m-auto boxcontainer">
+                <img src="./assets/cloud3.svg" alt="" class="bgCloud5" id="bgCloud1">
+                <img src="./assets/cloud3.svg" alt="" class="bgCloud6" id="bgCloud2">
+                <div class="col-sm-6 from-left slide-in employers-text">
+                    <h1 class=" bold-text">
+                        Enjoy a great ROI , while your employees appreciate your support
+
+                    </h1>
+                    <h3>
+                        A benefit that provides tangible value to employees and employers
+
+                    </h3>
+                    <ul>
+                        <li>
+                            Retention
+                        </li>
+                        <li>
+                            Productivity
+                        </li>
+                        <li>
+                            Engagement
+
+                        </li>
+                        <li>
+                            Morale
+
+                        </li>
+                        <li>
+                            Lolatly
+
+                        </li>
+                        <li>
+                            Absenteeism
+                        </li>
+                        <li>
+                            Health care costs
+                        </li>
+                        <li>
+                            Disengagement
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 fade-in employers-img">
+                    <img src="./assets/Honnest_Care2.svg" alt="" width="600" class="emp-img">
                 </div>
             </div>
         </section>
+        <!-- Request A Demo Section -->
+        <section class="requestADemo" id="requestADemo">
 
-        <section class="section3"></section>
+            <div class="m-auto text-center rad-text">
+
+                <h2 class="bold-text">
+                    <span class="special-text">Hello, Dumela, Hola, Hey,</span> we would love to hear from you
+
+
+                </h2>
+                <p>
+                    Simply click on one of the icons and one of our team members will reach out to you as soon as
+                    possible , a
+                    private demo will then be scheduled
+
+                </p>
+                <p>
+                    Are you an employee wanting Honest care? Let us know
+
+                </p>
+            </div>
+            <div class="row w-75 m-auto">
+                <div class="col-sm-6 boxcontainer ">
+                    <img src="./assets/cloud1.svg" alt="" class="bgCloud3" id="bgCloud1">
+                    <img src="./assets/cloud1.svg" alt="" class="bgCloud4" id="bgCloud2">
+
+                    <!-- Contact Form -->
+                    <form class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter name" id="name" required>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Last name" id="last-name"
+                                required>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company</label>
+                            <input class="form-control" id="company" placeholder="Enter company name" required>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+
+                        <div class="form-group ">
+                            <label for="company-size">Company Size</label>
+                            <select id="company-size" class="form-control">
+                                <option selected>0 - 50 employees</option>
+                                <option>0 - 100 employees</option>
+                                <option>more than 100 employees</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">Phone number</label>
+                            <input class="form-control" id="phone-number" placeholder="Enter phone number" required>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How can we assist you?</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message here"
+                                required></textarea>
+                            <div class="invalid-feedback">
+                                Please fill in this field
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-custom">Submit Demo Request</button>
+                    </form>
+                </div>
+
+                <div class="col-sm-6  box-container">
+                    <!-- <div id="map"></div> -->
+                    <div class="venn-diagram second d-none d-md-block">
+                        <div class="inner ">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle1">
+                        </div>
+                        <div class="inner2">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle2">
+
+                        </div>
+                        <div class="inner3">
+                            <img src="./assets/circle.svg" alt="" width="200" id="circle3">
+
+                        </div>
+                    </div>
+                    <ul class="social social2 m-auto d-sm-block ">
+
+                        <li class="facebook">
+                            Click icon to get the google maps location.
+                            <a href="https://goo.gl/maps/hqHyeiyqTNYZP9bK8" class="entypo-facebook" target="blank"> <i
+                                    class="fas fa-map-marked-alt icon"></i> </a>
+                            </a></li>
+                        <li class="twitter">
+                            Click icon to send us an email
+                            <a href="mailto:hello@honestcareworld.com?subject=Demo%20Request&body=The%20body%20of%20the%20email"
+                                target="_blank" class="entypo-twitter"><i class="far fa-envelope icon"></i>
+                            </a></li>
+
+                        <li class="instagram">
+                            Click icon to send us a whatsapp message
+                            <a href="https://wa.me/27718379681?text=Hi%20there,%20I'm%20interested%20in%20the%20services%20offered%20by%20HonestCare.%20My%20name%20is
+                            " class="entypo-instagram" target="_blank"> <i class="fab fa-whatsapp icon"></i></a></li>
+                        <li class="instagram">
+                            Click icon to give us a ring
+                            <a href="tel:+27718379681
+                                " class="entypo-instagram" target="_blank"> <i class="fas fa-phone icon"></i></a>
+                        </li>
+                        <li>
+                            Phone number : +27718379681
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
-       
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <footer>
+        <div class="footerContainer">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="#whyHonestCare">Why Honest Care</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#howItWorks">How it works</a>
+
+                        </li>
+                        <li class="list-group-item">
+                            <a href="#about">About</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="#employers">Employers</a>
+                        </li>
+
+
+
+                        <li class="list-group-item">
+                            <a href="#requestADemo" class="btn btn-outline-light rad-btn-f">Request A Demo</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div>Follow Us :</div>
+                    <div class="m-auto text-center">
+                        <ul class="social m-auto social-f">
+
+                            <li class="facebook">
+
+
+                                <a href="https://www.facebook.com/HonestcareSA" class="entypo-facebook" target="_blank">
+                                    <i class="fab fa-facebook-f icon"></i> </a>
+                                </a></li>
+                            <li class="twitter"><a href="https://www.linkedin.com/company/honest-care"
+                                    class="entypo-twitter" target="_blank"><i class="fab fa-linkedin icon"></i>
+                                </a></li>
+                            <li class="instagram"><a href="https://www.instagram.com/honestcareworld/"
+                                    class="entypo-instagram" target="_blank"> <i class="fab fa-instagram icon"></i></a>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    Address:
+                    <br>
+                    <br>
+                    22 Sloane Street
+                    <br>
+                    Bryanston
+                    <br>
+                    Johannesburg
+                    <br>
+                    2191
+
+
+                </div>
+
+                <div class="copyright">
+                    &#169; <span id="year"></span> Honest Care World. All rights reserved
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/6fb391dc12.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="./script.js"></script>
 
-    <script src="script.js"></script>
+
+
+
 </body>
 
 </html>

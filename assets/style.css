@@ -1,27 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One:wght@400;700&display=swap");
+
+html {
+    scroll-behavior: smooth;
+}
+
+#cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #50409a;
+    z-index: 9999;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 200px;
+    color: #fff;
+    font-family:tahoma;
+  }
+  
 
 body {
     overscroll-behavior: none;
     box-sizing: border-box;
     max-width: 100vw;
     overflow-x: hidden !important;
+    font-family: "Yeseva One", sans-serif !important;
+    position: relative;
 }
 .navbar {
     z-index: 5;
 }
 
-.container {
-    margin: 0 !important;
-   
-    padding-top: 10vh;
-   padding-left: 0 !important;
+/* Drop down */
+/* The dropdown container */
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+    position: inherit !important;
 }
 
-.section1 .row {
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 8px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    border-top: #50409a 1px solid;
+    transition: 1s;
+    -webkit-transition: 0.3s;
+    pointer-events: none;
+}
+
+.dropdown-content.r-0 {
+    right: 10px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: rgb(235, 235, 235);
+    text-decoration: none;
+    color: #50409a;
+    padding-left: 20px;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    pointer-events: all;
+    display: block;
+}
+
+.navbar-image {
+    width: 100px;
+}
+
+.nav-link i {
+    font-size: 30px;
+    color: #50409a;
+}
+
+.user-account span {
+    display: none;
+}
+
+section {
+    height: fit-content;
+
+    width: 100vw;
+    padding-top: 15vh;
+    overflow: hidden;
+}
+.container {
+    margin: 0 !important;
+
+    padding-top: 10vh;
+    padding-left: 0 !important;
+}
+.m50 {
+    padding: 0 10px 10px 10px !important;
+    margin: auto;
+    width: 70%;
+}
+
+.btn-custom {
+    background-color: #50409a;
+    color: white !important;
+}
+
+.bold-text {
+    font-weight: bold;
+    font-size: 45px !important;
+}
+
+.white-text {
+    color: white;
+}
+/* Carousel */
+
+.carousel-inner {
+    height: 70vh;
+}
+
+.carousel-indicators li {
+    background-color: white !important;
+}
+
+.carousel-indicators .active {
+    background-color: #50409a !important;
+}
+
+.carousel-indicators > li {
+    border-radius: 12px;
+    border: 5px solid black;
+    height: 20px !important;
+    width: 20px !important;
+}
+.landing .row {
     margin: 0 auto;
     width: 80%;
 }
-
 .navbar-collapse {
     background-color: white !important;
     width: 100vw;
@@ -35,105 +179,66 @@ body {
     border: none !important;
     background: transparent !important;
     outline: none;
-  }
+}
 
-.navbar-toggler:focus, .navbar-toggler:hover{
+.navbar-toggler:focus,
+.navbar-toggler:hover {
     outline: none;
 }
-  .navbar-toggler:hover {
+.navbar-toggler:hover {
     background: transparent !important;
-  }
-  .navbar-toggler .icon-bar {
+}
+.navbar-toggler .icon-bar {
     width: 22px;
     background-color: black;
     margin: 3px;
     height: 3px;
     transition: all 0.2s;
-  }
-  .navbar-toggler .top-bar {
+}
+.navbar-toggler .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
-  }
-  .navbar-toggler .middle-bar {
+}
+.navbar-toggler .middle-bar {
     opacity: 0;
-  }
-  .navbar-toggler .bottom-bar {
+}
+.navbar-toggler .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
-  }
-  .navbar-toggler.collapsed .top-bar {
+}
+.navbar-toggler.collapsed .top-bar {
     transform: rotate(0);
-  }
-  .navbar-toggler.collapsed .middle-bar {
+}
+.navbar-toggler.collapsed .middle-bar {
     opacity: 1;
-  }
-  .navbar-toggler.collapsed .bottom-bar {
+}
+.navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
-  }
-.section1, .section2, .section3{
-    height: 100vh;
-
-
-    width: 100vw;
-}
-
-
-.tab {
-    overflow: hidden;
-    margin: 50px;
-}
-.tablinks {
-    background-color: white;
-    float: left;
-    border: 1px solid black;
-    cursor: pointer;
-    padding: 14px 16px;
-    margin-left: 14px;
-    margin-top: 14px;
-    border-radius: 0 !important;
-    transition: 0.4s;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-}
-
-.tab button.active {
-    background-color:#50409A;
-    color: white;
-    border: none;
-}
-
-.tab button:hover {
-    background-color: #50409A;
-    /* border-color: white; */
-    color: white;
-}
-
-.tab button:focus {
-    outline: none;
-}
-
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    margin: 30px 0 ;
-    animation: fadeEffect 3s;
-    -webkit-animation: fadeEffect 3s;
-    -moz-animation: fadeEffect 3s;
 }
 
 .landingImg {
-    width: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
 }
 
 .landing-text {
     margin-top: 50px;
-    margin-left: 80px;
-    font-size: 60px;
+    margin-left: 20px;
+    font-size: 53px;
     font-weight: bold;
 }
 
+.landing-subheading {
+    margin-left: 20px;
+}
 .special-text {
-    color: #50409A;
+    color: #50409a;
+}
+
+.big-text {
+    font-size: 70px !important;
 }
 @keyframes fadeEffect {
     from {
@@ -144,43 +249,32 @@ body {
     }
 }
 
-
-.section2{
+.whyHonestCare {
     position: relative;
-    height: 100vh;
-    background-color: #1f1258;
-    z-index: -10;
-    color: white;
+    background-color: #ffe4d4;
+    color: black;
     width: 100vw;
+    padding-bottom: 70px;
 }
 
-.section2::before {
-    content: "";
-    position: absolute;
-    top: -10%;
-    left: -25%;
-    z-index: -100;
-    width: 125vw;
-    height: 75%;
-    background: inherit;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg);
-    -webkit-transform-origin: 0 0;
-    transform-origin: 0 0;
+.whyHonestCare .card:nth-child(1) {
+    height: 80%;
 }
 
+#whyHonestCareImg {
+    margin-left: 50px;
+}
 
 .boxcontainer {
     position: relative;
 }
 .bgCloud1 {
     position: absolute;
-    top: -10%;
+    top: -20%;
     left: -10%;
     z-index: -11;
     width: 500px;
     animation: translateX 25s infinite;
-
 }
 .bgCloud2 {
     position: absolute;
@@ -188,15 +282,13 @@ body {
     left: -10%;
     z-index: -11;
     width: 300px;
-   animation: translateX 20s infinite;
+    animation: translateX 20s infinite;
 }
 
 @keyframes translateX {
     50% {
         transform: translateX(130px);
     }
-
-
 }
 
 .box2 {
@@ -213,19 +305,23 @@ body {
     position: absolute;
     top: 50%;
     right: 10%;
-    z-index: -11;
+    z-index: 11;
     width: 300px;
     height: 300px;
     border: 30px solid rgba(207, 196, 205, 0.3);
     transform: rotateZ(65deg);
-
 }
 
-.section1 {
-    height:  110vh;
+.landing {
+    padding-top: 0 !important;
+
+    height: 80vh;
 }
 
-@keyframes rotate{
+.landing .boxcontainer {
+    padding-top: 10vh;
+}
+@keyframes rotate {
     100% {
         transform: rotate(180deg);
     }
@@ -235,53 +331,643 @@ body {
     position: absolute;
     top: 70%;
     right: 0%;
-    z-index: -11;
+    z-index: 11;
     width: 200px;
     height: 200px;
     border: 30px solid rgba(119, 108, 108, 0.3);
     animation: rotate 3s infinite;
-
 }
 
-.section2 .row {
+.whyHonestCare .row {
     margin: 0 auto;
     width: 80%;
+}
+
+.whyHonestCare .row .col-md-4 {
+    z-index: 1000;
 }
 
 .card {
     color: black;
     text-align: center;
     margin: 30px 0px;
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.075);
 }
 
-@media screen and (max-width: 768px){
+.howItWorks .card {
+    box-shadow: 10px 10px rgba(255, 255, 255, 0.198);
+    width: 78%;
+    margin: 30px auto;
+    padding: 50px;
+}
+
+.card:hover button {
+    display: block !important;
+}
+
+.footerContainer {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+    padding: 30px 0px;
+}
+
+.about {
+    height: fit-content;
+}
+.requestADemo {
+    height: fit-content;
+    padding-bottom: 50px;
+}
+footer {
+    background-color: #50409a;
+    height: fit-content;
+    width: 100vw;
+}
+
+.footerContainer .list-group li {
+    background-color: inherit !important;
+    width: 80%;
+}
+
+.footerContainer .list-group li a {
+    color: white;
+}
+
+/* To be changed */
+
+.mt50 {
+    padding: 70px 0 0px 0px;
+}
+
+.servicesImg {
+    position: absolute;
+    width: 1000px;
+    z-index: -11;
+    left: 0;
+    opacity: 0.3;
+}
+
+.servicesImg2 {
+    position: absolute;
+    width: 800px;
+    z-index: -11;
+    right: 0;
+    opacity: 0.2;
+    animation: translateX 12s infinite;
+}
+
+.list-group-item {
+    background-color: transparent !important;
+}
+
+.nav-item .active.nav-link {
+    font-weight: bold;
+    color: #50409a !important;
+}
+
+.nav-item:nth-child(3) .active.nav-link {
+    color: white !important;
+}
+
+.aboutCnt {
+    width: 80%;
+    margin: 0 auto !important;
+    padding-bottom: 100px;
+}
+
+/* social icons */
+.social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.social2 {
+    flex-direction: column;
+}
+
+.social li a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.social2 li a {
+    width: 80px;
+    height: 80px;
+    font-size: 50px;
+}
+.icon {
+    position: relative;
+    color: #262626;
+    transition: 0.5s;
+    z-index: 3;
+}
+
+.social li a:hover .icon {
+    color: white;
+    transform: rotateY(360deg);
+}
+
+.social li a::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.social li a:hover::before {
+    top: 0;
+}
+
+.social li:nth-child(1) a:before {
+    background: #3b5999;
+}
+
+.social li:nth-child(2) a:before {
+    background: #0e76a8;
+}
+
+.social li:nth-child(3) a:before {
+    background: #e1306c;
+}
+
+.social.social2 li:nth-child(1) a:before {
+    background: #1ea362;
+}
+
+.social.social2 li:nth-child(2) a:before {
+    background: #d44638;
+}
+
+.social.social2 li:nth-child(3) a:before {
+    background: #25d366;
+}
+
+.social.social2 li:nth-child(4) a:before {
+    background: #50409a;
+}
+.bgNoise4 {
+    position: absolute;
+    top: -110%;
+    left: 0;
+    width: 600px;
+    animation: translateX 16s infinite;
+}
+
+.about .card {
+    background-color: rgba(85, 24, 155, 0);
+    border: 3px solid black;
+}
+
+.about .card:hover {
+    padding: 0 !important;
+
+    margin: 0 !important;
+}
+
+.bgCloud3 {
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    z-index: -11;
+    width: 500px;
+    animation: translateX 25s infinite;
+}
+.bgCloud4 {
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    z-index: -11;
+    width: 300px;
+    animation: translateX 20s infinite;
+}
+.bgCloud5 {
+    position: absolute;
+    top: 0%;
+    left: -10%;
+    z-index: 1;
+    width: 500px;
+    animation: translateX 25s infinite;
+    opacity: 0.08;
+}
+.bgCloud6 {
+    position: absolute;
+    top: -30%;
+    left: -10%;
+    z-index: 1;
+    width: 300px;
+    animation: translateX 20s infinite;
+    opacity: 0.08;
+}
+
+.fade {
+    margin: 50px;
+    padding: 50px;
+    background-color: lightgreen;
+    opacity: 1;
+}
+/* Honest Care services */
+.HCServices {
+    background-image: url("../assets/images/family_04.jpg");
+    background-attachment: fixed;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 150vh;
+    margin-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 120vw; /* Full width (cover the whole page) */
+    height: 150vh; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    cursor: pointer; /* Add a pointer on hover */
+}
+/* Employers section */
+.employers {
+    color: black !important;
+    background-color: #ffe4d4;
+    padding-bottom: 10vh;
+}
+
+/* Venn Diagram */
+.venn-diagram {
+    position: relative;
+    width: 500px;
+    top: 300px;
+    left: 200px;
+    height: 300px;
+    transform: translateY(350px);
+}
+
+.venn-diagram.second {
+    position: absolute;
+    transform: translateY(-100px);
+}
+
+.second .inner::before {
+    color: black;
+}
+
+.second .inner2::before {
+    color: black;
+}
+
+.second .inner3::before {
+    color: black;
+}
+#circle3 {
+    animation: scale 9s infinite;
+    position: absolute;
+    top: -40%;
+
+    left: 25%;
+}
+
+#circle2 {
+    animation: scale 9s infinite 6s;
+    position: absolute;
+
+    left: 40%;
+}
+
+#circle1 {
+    animation: scale 9s infinite 3s;
+    position: absolute;
+
+    left: 10%;
+}
+
+.inner::before {
+    text-align: center;
+    content: "WORK";
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+.inner2::before {
+    text-align: center;
+    content: "FAMILY";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+.inner3::before {
+    text-align: center;
+    content: "CAREER";
+    position: absolute;
+    top: -20%;
+    left: 35%;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes scale {
+    50% {
+        transform: scale(1.5);
+    }
+}
+
+/* Content Reveal Animations */
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+}
+
+.from-left {
+    transform: translateX(-20%);
+}
+
+.from-right {
+    transform: translateX(20%);
+}
+
+.from-left,
+.from-right {
+    transition: transform 0.4s ease-in;
+}
+
+.from-left.appear,
+.from-right.appear {
+    transform: translateX(0);
+}
+
+#topBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 9900; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #50409a; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+
+#topBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.rad-btn-f:hover {
+    color: black !important;
+}
+
+.copyright {
+    padding-top: 20px;
+}
+/* Media Queries */
+
+/* Small Screens */
+@media screen and (max-width: 640px) {
+    section {
+        padding-top: 0px;
+    }
+    .whc-text {
+        width: 80% !important;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .w-80 {
+        width: 80%;
+    }
+    .subsection {
+        padding-top: 50px;
+    }
+
+    .user-account span {
+        display: block !important;
+    }
+
+    .servicesImg {
+        display: none;
+    }
+    .landing {
+        height: 500px;
+    }
+
+    .landing .row {
+        width: 90%;
+    }
+
+    .landing .boxcontainer {
+        padding-top: 0;
+    }
+
+    .navbar-brand {
+        width: 80px;
+    }
+
+    .navbar-image {
+        width: 80px;
+    }
     .landing-text {
         font-size: 30px;
-        margin: 10px 60px;
+        margin-left: 0;
+    }
+    .dropdown {
+        float: none;
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+    .bold-text {
+        font-size: 25px !important;
+    }
+    .landing-subheading {
+        margin-left: 0;
     }
     .landingImg {
         display: none;
     }
 
-    .box1 {
-        width: 100px;
-        height: 100px;
-        border: 3px solid rgba(255, 0, 0, 0.3);
+    .carousel-inner {
+        height: 470px;
     }
 
-    .box2 {
-        left: 10%;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(255, 0, 0, 0.3);
+    .whyHonestCare .row {
+        width: 100%;
     }
 
-    .tab {
-        margin: 10px 30px 10px 50px;
+    .whyHonestCare .row .col-sm-6:nth-child(1) {
+        padding-left: 0 !important;
     }
 
-    .tabcontent {
-        margin: 10px 50px;
+    #whyHonestCareImg {
+        width: 100vw;
+        margin-bottom: 50px;
+        margin-left: 0;
+    }
+    .m50 {
+        width: 80%;
+    }
+
+    #hiw-img {
+        width: 100vw !important;
+    }
+    .HCServices {
+        height: fit-content !important;
+        background-image: none !important;
+        background-color: #50409a !important;
+        margin-top: 0 !important;
+    }
+    #overlay {
+        height: inherit !important;
+    }
+
+    .venn-diagram {
+        position: absolute !important;
+        width: 300px !important;
+        top: 0px !important;
+        left: 30px !important;
+        height: 300px;
+        transform: translateY(150px) !important;
+        margin-top: 80px;
+    }
+
+    #circle1,
+    #circle2,
+    #circle3 {
+        width: 130px;
+    }
+
+    .aboutImg {
+        width: 100vw !important;
+    }
+
+    .about .row {
+        padding: 0 !important;
+    }
+
+    .aboutCnt {
+        width: 100% !important;
+    }
+
+    .about-text {
+        margin: 50px 10px;
+    }
+
+    .aboutCnt .col-sm-6:nth-child(1) {
+        padding: 0;
+    }
+
+    .about .w-50 {
+        width: 75% !important;
+    }
+
+    .employers {
+        padding-top: 10vh;
+        padding-bottom: 0vh !important;
+        margin-bottom: 10vh;
+    }
+
+    .employers .row {
+        margin: 0 auto !important;
+        padding: 0;
+    }
+
+    .employers-img.col-sm-6 {
+        padding: 0;
+    }
+
+    .employers .w-75 {
+        width: 100% !important;
+    }
+
+    .employers-text {
+        margin: 0 auto !important;
+        width: 75% !important;
+    }
+
+    .employers-img {
+        display: none;
+    }
+    footer {
+        height: fit-content;
+    }
+
+    .rad-text {
+        width: 75%;
+    }
+
+    .social.social2 {
+        padding-top: 30px;
     }
 }
 
+/* Medium screens */
+@media screen and (max-width: 1024px) {
+    .landing .row {
+        width: 90%;
+    }
+    #whyHonestCareImg,
+    #hiw-img,
+    .aboutImg,
+    .emp-img {
+        width: 400px;
+    }
+    .bold-text {
+        font-size: 30px !important;
+    }
+
+    .stat-cards-row {
+        width: 95vw !important;
+    }
+
+    .rad-text {
+        width: 75%;
+    }
+
+    .venn-diagram {
+        left: 0px;
+    }
+
+    .footerContainer {
+        width: 90%;
+    }
+}
